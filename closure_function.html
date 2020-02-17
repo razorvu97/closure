@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Замыкание функции</title>
+</head>
+<body>
+<script type="text/javascript">
+	function nas() {
+		var count = 0;
+		return function() {
+			count++;
+			console.log(count);
+		}
+	}
+
+	var x = nas();
+	var s = 0;
+	x();
+	while(s <= 10){
+		x();
+		s++;
+	}
+</script>
+</body>
+</html>
